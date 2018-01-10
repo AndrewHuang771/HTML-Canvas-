@@ -5,44 +5,7 @@ canvas.height=window.innerHeight;
 
 var c = canvas.getContext('2d');
 
-/*c.fillStyle='rgba(255,0,0,0.5)';
-c.fillRect(100,100,100,100);
-c.fillStyle='rgba(0,255,0,0.5)';
-c.fillRect(400,100,100,100);
-c.fillStyle='red';
-c.fillRect(300,300,100,100);
 
-// Line
-
-c.beginPath();      //Seperates this line from all other preexisting lines
-c.moveTo(50,300);    
-c.lineTo(300, 100);
-c.lineTo(400,300);
-c.strokeStyle="red";  //Changes line color
-c.stroke();
-
-//Arc / Circle
-//(x coordinate [int], ycoordinate [int],radius [int],startAngle [Float in radians],endAngle [Float in radians],drawCounterClockwise [True or False])
-
-//c.beginPath();
-//c.arc(300,300,30,0,Math.PI*2, false);   //Creates an Outline, needs a stroke propriety
-//c.strokeStyle = 'blue';
-//c.stroke();
-
-//Using For loop to make multiple circles. 
-
-for(var i=0;i<12;i++){
-	var x = Math.random()*window.innerWidth;
-	var y = Math.random()*window.innerHeight;
-	var r = Math.floor(Math.random())*256;
-	var b = Math.floor(Math.random())*256;
-	var g = Math.floor(Math.random())*256;
-	var rgb = "rgba('+r+','+g+','+b+','+0.9+')";
-	c.beginPath();
-	c.arc(x,y,30,0,Math.PI*2, false);   //Creates an Outline, needs a stroke propriety
-	c.strokeStyle=rgb;
-	c.stroke();
-}*/
 var mouse ={
 	x:undefined,
 	y:undefined
@@ -126,12 +89,6 @@ for (var i =0; i<800;i++) {
 var circle= new Circle(200,200,3,3,30);
 
 
-/*var x= Math.random()*innerWidth;
-var dx = (Math.random()-0.5)*8;
-var r = 30;
-var y= Math.random()*innerHeight;
-var dy = (Math.random()-0.5)*8;*/
-
 function animate() {
 	requestAnimationFrame(animate);
     c.clearRect(0,0,innerWidth,innerHeight);
@@ -140,25 +97,9 @@ function animate() {
     	circleArray[i].update();
     }
 
-	/*c.beginPath();
-    c.arc(x,y,r,0,Math.PI*2, false);   //Creates an Outline, needs a stroke propriety
-    c.strokeStyle='blue';
-    c.stroke();
-    
-    if (x+r>innerWidth || x-r<0) {
-    	dx=-dx;
-    }
-    x += dx;
 
-    if (y+r>innerHeight || y-r<0){
-    	dy=-dy;
-    }
-    y += dy;*/
 
 }
 
 animate();
 
-/*animate();
-
-animate();*/
